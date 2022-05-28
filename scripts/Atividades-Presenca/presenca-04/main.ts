@@ -1,12 +1,12 @@
 //----------------------------------------------------------------------------------------
-// Importando classe pilha
+// Importando classe fila
 //----------------------------------------------------------------------------------------
-import {Pilha} from "./pilha";
+import {Fila} from "./fila";
 
 //----------------------------------------------------------------------------------------
 // Criando variáveis que serão usadas no exemplo
 //----------------------------------------------------------------------------------------
-let pilha = new Pilha()
+let fila = new Fila()
 let itens: Array<any> = [
     "amanda",               // string
     10,                     // number int
@@ -16,18 +16,18 @@ let itens: Array<any> = [
 ]
 
 //----------------------------------------------------------------------------------------
-// Exemplificando inserção e retirada de itens do objeto Pilha
+// Exemplificando inserção e retirada de itens do objeto Fila
 //----------------------------------------------------------------------------------------
 console.log("inserindo items")
 
 for(let i = 0; i < itens.length; i++){
-    pilha.inserir(itens[i]);
-    pilha.mostrar();
+    fila.inserir(itens[i]);
+    fila.mostrar();
 }
 
 console.log("retirando items")
 
 for(let j = 0; j < itens.length; j++){
-    pilha.retirar();
-    pilha.mostrar();
+    fila.retirar();
+    fila.mostrar();
 }

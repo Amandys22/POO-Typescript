@@ -1,13 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 //----------------------------------------------------------------------------------------
-// Importando classe pilha
+// Importando classe fila
 //----------------------------------------------------------------------------------------
-const pilha_1 = require("./pilha");
+const fila_1 = require("./fila");
 //----------------------------------------------------------------------------------------
 // Criando variáveis que serão usadas no exemplo
 //----------------------------------------------------------------------------------------
-let pilha = new pilha_1.Pilha();
+let fila = new fila_1.Fila();
 let itens = [
     "amanda",
     10,
@@ -16,16 +16,16 @@ let itens = [
     { "chave": "valor" } // object
 ];
 //----------------------------------------------------------------------------------------
-// Exemplificando inserção e retirada de itens do objeto Pilha
+// Exemplificando inserção e retirada de itens do objeto Fila
 //----------------------------------------------------------------------------------------
 console.log("inserindo items");
 for (let i = 0; i < itens.length; i++) {
-    pilha.inserir(itens[i]);
-    pilha.mostrar();
+    fila.inserir(itens[i]);
+    fila.mostrar();
 }
 console.log("retirando items");
 for (let j = 0; j < itens.length; j++) {
-    pilha.retirar();
-    pilha.mostrar();
+    fila.retirar();
+    fila.mostrar();
 }
 //# sourceMappingURL=main.js.map
