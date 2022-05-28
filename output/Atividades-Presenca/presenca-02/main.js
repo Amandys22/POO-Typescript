@@ -1,6 +1,7 @@
 "use strict";
 //----------------------------------------------------------------------------------------
 // Funções de casting (transformar um tipo de dado em outro)
+//----------------------------------------------------------------------------------------
 function printBinario(numero) {
     return numero.toString(2);
 }
@@ -15,6 +16,7 @@ function printHexadecimal(numero) {
 }
 //----------------------------------------------------------------------------------------
 // Funções principais de montagem da tabela
+//----------------------------------------------------------------------------------------
 function printTabela() {
     let todosNumeros = [];
     for (var i = 0; i <= 255; i++) {
@@ -33,5 +35,6 @@ function printLinha(numero) {
 }
 //----------------------------------------------------------------------------------------
 // Chamar função para mostrar tabela na tela
+//----------------------------------------------------------------------------------------
 printTabela();
 //# sourceMappingURL=main.js.map
