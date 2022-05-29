@@ -1,15 +1,23 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+//----------------------------------------------------------------------------------------
+// Importando classes Ponto e Quadrilatero
+//----------------------------------------------------------------------------------------
 const ponto_1 = require("./ponto");
 const quadrilatero_1 = require("./quadrilatero");
+//----------------------------------------------------------------------------------------
+// Criando objetos para a testagem
+//----------------------------------------------------------------------------------------
 let ponto_a = new ponto_1.Ponto(0, 0);
 let ponto_b = new ponto_1.Ponto(30, 30);
 let quadrilatero = new quadrilatero_1.Quadrilatero(ponto_a, ponto_b);
-;
-let ponto_c = new ponto_1.Ponto(5, 60);
-let ponto_d = new ponto_1.Ponto(-6, 3);
-let ponto_e = new ponto_1.Ponto(0, 30);
-let ponto_f = new ponto_1.Ponto(5, 15);
+let ponto_c = new ponto_1.Ponto(5, 60); // meio interno meio externo
+let ponto_d = new ponto_1.Ponto(-6, 3); // externo
+let ponto_e = new ponto_1.Ponto(0, 30); // perímetro
+let ponto_f = new ponto_1.Ponto(5, 15); // pertence
+//----------------------------------------------------------------------------------------
+// Exemplificando checagem de pontos no quadrilátero
+//----------------------------------------------------------------------------------------
 if (quadrilatero.pertenceArea(ponto_c)) {
     console.log("O ponto c pertence a Área do quadrilátero");
 }
