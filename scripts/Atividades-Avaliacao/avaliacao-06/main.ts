@@ -1,16 +1,25 @@
+//----------------------------------------------------------------------------------------
+// Importando classes Ponto e Quadrilatero
+//----------------------------------------------------------------------------------------
 import {Ponto} from "./ponto"
 import {Quadrilatero} from "./quadrilatero"
 
+//----------------------------------------------------------------------------------------
+// Criando objetos para a testagem
+//----------------------------------------------------------------------------------------
 let ponto_a = new Ponto(0, 0);
 let ponto_b = new Ponto(30, 30);
-let quadrilatero = new Quadrilatero(ponto_a, ponto_b);;
+let quadrilatero = new Quadrilatero(ponto_a, ponto_b);
 
 
-let ponto_c = new Ponto(5, 60);
-let ponto_d = new Ponto(-6, 3);
-let ponto_e = new Ponto(0, 30);
-let ponto_f = new Ponto(5, 15);
+let ponto_c = new Ponto(5, 60); // meio interno meio externo
+let ponto_d = new Ponto(-6, 3); // externo
+let ponto_e = new Ponto(0, 30); // perímetro
+let ponto_f = new Ponto(5, 15); // pertence
 
+//----------------------------------------------------------------------------------------
+// Exemplificando checagem de pontos no quadrilátero
+//----------------------------------------------------------------------------------------
 if(quadrilatero.pertenceArea(ponto_c)){
     console.log("O ponto c pertence a Área do quadrilátero");
 } else {
