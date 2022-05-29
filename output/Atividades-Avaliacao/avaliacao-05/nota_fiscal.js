@@ -40,7 +40,6 @@ class NotaFiscal {
         }
         return valorCalculado;
     }
-    // Imprimir a NotaFiscal conforme o Layout definido
     imprimirNotaFiscal() {
         console.log(`${''.padEnd(110, "-")}`);
         console.log(`${'NOTA FISCAL'.padEnd(90)} ` +
