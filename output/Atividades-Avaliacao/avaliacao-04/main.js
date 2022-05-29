@@ -36,5 +36,4 @@ nf.adicionarItem(itnf3);
 console.log("=========================");
 console.log(nf);
 console.log("=========================");
-nf.imprimirNotaFiscal();
 //# sourceMappingURL=main.js.map

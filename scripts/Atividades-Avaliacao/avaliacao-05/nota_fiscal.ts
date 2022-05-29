@@ -60,30 +60,56 @@ export class NotaFiscal {
         return valorCalculado;
     }
 
-    // Imprimir a NotaFiscal conforme o Layout definido
-    
     imprimirNotaFiscal(): void {
-        console.log("---------------------------------------------");
-        console.log("NOTA FISCAL");
-        console.log("Cliente:", this.cliente.getcodigo());
-        console.log("Nome:", this.cliente.getnome());
-        console.log("CPF/CNPJ:", this.cliente.getcnpjcpf());
-        console.log("Data:", this.data);
+
+        console.log( `${''.padEnd(110, "-")}`);
+        console.log(
+            `${'NOTA FISCAL'.padEnd(90)} ` +
+            `${this.data.toLocaleDateString("pt-BR").padEnd(10)} ` 
+        );
+
+        console.log(
+            `${'Cliente: ' + this.cliente.getcodigo().toString().padEnd(10)}` +
+            `${'Nome: '    + this.cliente.getnome().toString().padEnd(50)}`
+        );
+        
+        console.log("CPF/CNPJ: ", this.cliente.getcnpjcpf());
+        console.log( `${''.padEnd(110, "-")}`);
         console.log("ITENS");
-        console.log("Seq | Descrição | QTD | Valor Unitário | Preço");
-        console.log("---------------------------------------------");
+        console.log( `${''.padEnd(110, "-")}`);
+
+        console.log(
+            `${'Seq'.padEnd(10)}` +
+            `${'Descrição'.padEnd(60)}` +
+            `${'QTD'.padEnd(10)}` +
+            `${'Valor Unitário'.padEnd(20)}` +
+            `${'Preço'.padEnd(10)}`
+        );
+        
+        
+        console.log(
+            `${''.padEnd(9, "-")}` +
+            `${' '.padEnd(60, "-")}` +
+            `${' '.padEnd(10, "-")}` +
+            `${' '.padEnd(20, "-")}` +
+            `${' '.padEnd(11, "-")}` +
+            '\n'
+        );
+
+
         for(let i = 0; i<this.items.length; i++) {
             let item: ItemNotaFiscal = this.items[i];
             console.log(
-                item.getsequencial(), 
-                item.getproduto().getdescricao(), 
-                item.getquantidade(),
-                item.getproduto().getvalorUnitario(),
-                item.getvalor()
+                `${item.getsequencial().toString().padEnd(10)}` +
+                `${item.getproduto().getdescricao().toString().padEnd(60)}` +
+                `${item.getquantidade().toString().padEnd(10)}` +
+                `${item.getproduto().getvalorUnitario().toString().padEnd(20)}` +
+                `${item.getvalor().toString().padEnd(20)}` 
             );
         }
         
-        console.log("---------------------------------------------");
-        console.log("Valor Total:", this.calcularValorNotaFiscal())
+        console.log( `${''.padEnd(110, "-")}`);
+        console.log("Valor Total: ", this.calcularValorNotaFiscal())
+        console.log( `${''.padEnd(110, "-")}`);
     }
 }
