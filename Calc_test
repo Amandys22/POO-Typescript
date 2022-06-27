@@ -1,0 +1,26 @@
+importar teste unitário
+
+ classe Calculadora : 
+      def __init__ ( self ): passar 
+     def soma ( self , a , b ): retornar a + b 
+     def sub ( self , a , b ): retornar a - b 
+     def mult ( self , a , b ): retornar a * b 
+     def div ( self , a , b ): se b != 0 : retornar a / b 
+class TesteCalculadora ( unittest . TestCase ): 
+def test_soma ( self ): próprio . calc = Calculadora () 
+resultado = self . cálculo _ soma ( 4 , 10 ) 
+esperado = 14 
+próprio . assertEqual ( resultado , esperado ) 
+
+def test_sub ( self ): próprio . calc = Calculadora () 
+resultado = self . cálculo _ sub ( 15 , 5 ) 
+esperado = 5 
+próprio . assertEqual ( resultado , esperado ) 
+
+def test_mult ( self ): próprio . calc = Calculadora () 
+resultado = self . cálculo _ múltiplo ( 4 , 6 ) 
+esperado = 24 
+próprio . assertEqual ( resultado , esperado ) 
+
+def test_div ( self ): próprio . calc = Calculadora () resultado = self . cálculo _ div ( 12 , 2 ) 
+esperado = 4 próprio
